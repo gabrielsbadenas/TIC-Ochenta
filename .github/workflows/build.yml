@@ -575,7 +575,7 @@ jobs:
 
   # === Android ===
   android:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -601,7 +601,7 @@ jobs:
         run: |
           cd build/android
           chmod +x gradlew
-          ./gradlew assembleRelease
+          ./gradlew assembleRelease DBUILD_PRO=On
           cp app/build/outputs/apk/release/app-release.apk tic80.apk
 
         env:
