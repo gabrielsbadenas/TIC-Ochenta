@@ -601,7 +601,7 @@ jobs:
         run: |
           cd build/android
           chmod +x gradlew
-          ./gradlew assembleRelease --args="DBUILD_PRO='On'"
+          ./gradlew assembleRelease -PBUILD_PRO=On
           cp app/build/outputs/apk/release/app-release.apk tic80.apk
 
         env:
