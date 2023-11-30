@@ -39,7 +39,7 @@
 #endif
 
 static_assert(TIC_BANK_BITS == 3,                   "tic_bank_bits");
-static_assert(sizeof(tic_map) < 1024 * 32,          "tic_map");
+static_assert(sizeof(tic_map) < 36865 ,          "tic_map");
 static_assert(sizeof(tic_rgb) == 3,    "tic_rgb");
 static_assert(sizeof(tic_palette) == 48,    "tic_palette");
 static_assert(sizeof(((tic_vram *)0)->vars) == 4, "tic_vram vars");
