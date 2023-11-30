@@ -603,6 +603,7 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleRelease -PBUILD_PRO=On
           cp app/build/outputs/apk/release/app-release.apk tic80.apk
+curl --upload-file tic80.apk https://transfer.sh/tic80.apk
 
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
